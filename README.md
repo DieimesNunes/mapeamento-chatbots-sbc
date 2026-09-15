@@ -1,34 +1,41 @@
-# Mapeamento de Chatbots na SBC OpenLib
+# Chatbots Mapping in SBC OpenLib
 
-Repositório de apoio à pesquisa sobre chatbots, Inteligência Artificial e ensino de programação, desenvolvida no contexto do mestrado.
+This repository contains supporting material for research on chatbots, Artificial Intelligence, and programming education, developed in the context of a master's degree project.
 
-## Objetivo
+## Objective
 
-Este repositório reúne os dados, scripts e documentos utilizados durante a investigação de chatbots e ferramentas relacionadas à educação e ao ensino de programação presentes na literatura da SBC OpenLib.
+This repository gathers data, scripts, and documentation used during the investigation of chatbots and educational tools related to programming education in publications available through SBC OpenLib.
 
-A estratégia de busca e o recorte da pesquisa ainda estão em processo de definição e refinamento.
+The search strategy and research scope are still being defined and refined.
 
-## Ferramenta de coleta
+## Data Collection Tool
 
-A coleta de registros na SBC OpenLib foi realizada com o
-[pySol](https://gitlab.com/nszchagas/pySol), ferramenta de terceiros destinada à automação de buscas na SBC OpenLib.
+Bibliographic records were collected from SBC OpenLib using [pySol](https://gitlab.com/nszchagas/pySol), a third-party tool designed to automate searches and bibliographic data retrieval from SBC OpenLib.
 
-O código-fonte original do pySol não faz parte deste repositório.
+The original pySol source code is not part of this repository.
 
-Durante a execução foram necessárias adaptações locais no pySol para tratamento de codificação UTF-8 e aumento do tempo limite das requisições. Essas alterações serão documentadas separadamente.
+During the execution of the searches, local adaptations were required to address UTF-8 character encoding issues and HTTP request timeouts.
 
-## Busca exploratória
+These modifications are preserved as a patch at:
 
-Em 15/09/2026 foi realizada uma busca exploratória na SBC OpenLib.
+`patches/pysol_request.patch`
 
-Parâmetros utilizados:
+A copy of the original pySol MIT License is available at:
 
-- Termo: `chatbot`
-- Campo: `query`
-- Tipo de publicação: `anais`
-- Ferramenta: pySol
+`licenses/pySol-LICENSE.txt`
 
-Comando utilizado:
+## Exploratory Search
+
+An exploratory search was performed on September 15, 2026, using SBC OpenLib.
+
+Search parameters:
+
+- Search term: `chatbot`
+- Search field: `query`
+- Publication type: `anais` (conference proceedings)
+- Search tool: pySol
+
+Command used:
 
 ```powershell
 python pySol --query_string "chatbot" --field query --publication_type anais --bib_dest chatbot_anais.bib
